@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: album-api-deployment
+  labels:
+    app: album-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: album-api
+  template:
+    metadata:
+      labels:
+        app: album-api
+    spec:
+      containers:
+      - name: album-api
+        image: blessmwafu/album-api:1.0.0-13
+        ports:
+        - containerPort: 8080
