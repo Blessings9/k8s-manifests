@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: album-api
-        image: blessmwafu/album-api:1.0.0-13
+        image: blessmwafu/album-api:1.0.19
         ports:
         - containerPort: 8080
